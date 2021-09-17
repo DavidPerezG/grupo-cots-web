@@ -1,0 +1,56 @@
+<ng-template #contenido let-modal>
+    <form [formGroup]="form" #adminForm="ngForm"  (ngSubmit)="saveForm($event)" class="add-admin-form-body" action="">
+        <div class="modal-header">Mis Datos</div>
+        <div class="modal-body">
+            
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        name="name" 
+                        id="name" 
+                        placeholder="Rolando Gutierrez..."
+                        formControlName="name"
+                        value={{myUser.name}}
+                        
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electronico</label>
+                    <input 
+
+                        type="email" 
+                        class="form-control" 
+                        name="email" 
+                        id="email" 
+                        placeholder="name@example.com" 
+                        formControlName="email"
+                        [class.invalid-field]="emailFieldIsInvalid"
+                        >
+                        <small class="invalid-message" *ngIf="emailFieldIsInvalid" >Correo no valido</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input 
+                        type="password" 
+                        class="form-control" 
+                        name="password" 
+                        id="password" 
+                        placeholder="Nueva Contraseña Opcional" 
+                        formControlName="password">
+                </div> 
+                
+            
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary cancelar" aria-label="cancelar" type="button" (click)="modal.dismiss()">Cancelar</button>
+            <button [disabled]="form.invalid" class="btn btn-primary registrar" aria-label="registrar" type="submit" (click)="modal.close()">Actualizar</button>
+            
+        </div>
+    </form>
+</ng-template>
+
+<button class="button-mis-datos" ngbDropdownItem (click)="openModal(contenido)">Mis Datos</button>

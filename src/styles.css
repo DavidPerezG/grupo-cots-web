@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    background-image: linear-gradient(90deg, #6D71A2, #269BB7);
+    width: 100%;
+    height: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

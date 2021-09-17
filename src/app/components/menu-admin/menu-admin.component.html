@@ -1,0 +1,68 @@
+<div class="dimScreen">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img id="logo-h" src="../../../assets/grupo-cots-logo-h.png " alt="">
+            </div>
+            <div class="col-md-7 buttons">
+                
+                
+                <div ngbDropdown placement="bottom-right">
+                    <button id="button-clinica"
+                            ngbDropdownToggle>Opciones</button>
+                    <div style="width: 30%;" ngbDropdownMenu="button-clinica">
+                        <button ngbDropdownItem id="button-clinica">Ir a Clinicas</button>
+                        <app-modal-perfil></app-modal-perfil>
+                        <button ngbDropdownItem id="button-logout" (click)="authService.logOut()">Salir</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <form action="">
+                    <div class="form-group search-form">
+                        <i class="fas fa-accessible-icon"></i>
+                        <div class="input-group mb-3 search-input">
+                            <input type="text" [(ngModel)]="termino" name="termino" class="form-control" placeholder="Buscar">
+                            <div class="input-group-append">
+                                <button class="btn btn-success" id="search-button" type="submit">
+                                    <img id="search-svg" src="../../../assets/search_black_24dp.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="container container-list">
+                    <div class="user" *ngFor="let user of usersapiService.users | filter:termino | paginate: { itemsPerPage: 6, currentPage: p } ">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <p class="user-element">Nombre: {{user.name}}</p>
+                                <p class="user-element">Correo: {{user.email}}</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-secondary btn-sm"><i class="material-icons">edit</i></button>
+                                <button class="btn btn-danger btn-sm" (click)="deleteAdmin(user._id)"><i class="material-icons">delete</i></button>
+                            </div>
+                        </div>
+                        
+
+                        <hr>
+                    </div>
+                    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
+                    
+                </div>
+                <app-modal-form></app-modal-form>
+            </div>
+            <div class="col-md-0">
+                
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+

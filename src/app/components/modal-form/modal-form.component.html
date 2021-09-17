@@ -1,0 +1,51 @@
+<ng-template #contenido let-modal>
+    <form [formGroup]="form" #adminForm="ngForm" (ngSubmit)="saveForm($event)" class="add-admin-form-body" action="">
+        <div class="modal-header">Nuevo Administrador</div>
+        <div class="modal-body">
+            
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    name="name" 
+                    id="name" 
+                    placeholder="Rolando Gutierrez..."
+                    formControlName="name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electronico</label>
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        name="email" 
+                        id="email" 
+                        placeholder="name@example.com" 
+                        formControlName="email"
+                        [class.invalid-field]="emailFieldIsInvalid"
+                        >
+                        <small class="invalid-message" *ngIf="emailFieldIsInvalid" >Correo no valido</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña por Defecto</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    name="password" 
+                    id="password" 
+                    placeholder="grupo-cots2021" 
+                    readonly>
+                </div> 
+                
+            
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary cancelar" aria-label="cancelar" type="button" (click)="modal.dismiss()">Cancelar</button>
+            <button [disabled]="form.invalid" class="btn btn-primary registrar" aria-label="registrar" type="submit" (click)="modal.close()">Registrar</button>
+        </div>
+    </form>
+</ng-template>
+
+<button class="crear-admin" (click)="openModal(contenido)">Registrar Administrador</button>

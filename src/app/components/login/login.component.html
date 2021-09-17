@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img id="grupo-cots-circular" src="../../../assets/logo grupocost_2.png" alt="">
+        </div>
+
+        <div class="col-md-7">
+            
+            <!-- Login Form -->
+            <div *ngIf="loginmessage != null">hola</div>
+            <form class="login-form" (submit)="signIn()">
+                <!-- Email -->
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="email-input"><img class="svg-label" id="email-svg" src="..//../../assets/email_svg.svg" alt=""></label>
+                    </div>
+                    <div class="col-10 parent">
+                        <input type="email" [(ngModel)]="user.email" class="form-control" id="email-input" name="email" placeholder="Correo Electronico">
+                    </div>   
+                </div>
+                <!-- Password -->
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label for="pass-input"><img class="svg-label" id="pass-svg" src="..//../../assets/pass_svg.svg" alt=""></label>
+                    </div>
+                    <div class="col-10 parent">
+                        <input type="password" [(ngModel)]="user.password" class="form-control form-control-email" id="pass-input" name="password" placeholder="Contraseña">
+                    </div>   
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    
+</div>

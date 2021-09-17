@@ -1,0 +1,74 @@
+.modal-header{    
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 2em;
+    background-image: linear-gradient(90deg, #6D71A2, #269BB7);
+}
+
+.modal-body{
+    font-family: 'Montserrat';
+}
+
+.modal-footer{
+    font-family: 'Montserrat';
+    
+    background-image: linear-gradient(90deg,#8085BA, #3EACC7  );
+
+}
+
+.form-group{
+    margin-bottom: 20px;
+    
+}
+
+
+
+.btn{
+   
+    color: white;
+    
+}
+
+.cancelar{
+    background-color: rgb(230, 40, 113)
+}
+
+.registrar{
+    background-color: rgb(24, 211, 139)
+}
+
+.crear-admin{
+    background-color: transparent;
+    border-radius: 8px;
+    border-color:  #000000;
+    border-width: 3px;
+    font-family: 'Montserrat';
+    color: #85799E;
+    padding: 10px 0px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-mis-datos{
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    border-color:  #85799E;
+    border-width: 3px;
+    font-family: 'Montserrat';
+    color: #85799E;
+    padding: 2% 10%;
+    margin-bottom: 10px;
+    float:right;
+    
+    right:10px;
+    
+}
+
+.invalid-field{
+    border-color:rgb(230, 40, 113)
+}
+
+.invalid-message{
+    color:rgb(230, 40, 113)
+}

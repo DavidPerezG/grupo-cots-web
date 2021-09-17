@@ -1,0 +1,140 @@
+
+
+.container{
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#logo-h{
+    height: 100%;
+    width: 100%;
+}
+
+#button-clinica{
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    border-color:  #85799E;
+    border-width: 3px;
+    font-family: 'Montserrat';
+    color: #85799E;
+    padding: 2% 10%;
+    margin-bottom: 10px;
+    float:right;
+    
+    right:10px;
+    
+}
+
+#button-logout{
+    text-align: center;
+    background-color: transparent;
+    border-radius: 8px;
+    border-color:  #85799E;
+    border-width: 3px;
+    font-family: 'Montserrat';
+    color: #85799E;
+    padding: 2% 10%;
+    margin-bottom: 10px;
+    margin-right:5px;
+    float:right;
+}
+
+.search-input{
+    background-color: transparent;
+    border-color: #85799E;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    color:  #85799E;  
+    
+}
+
+#search-button{
+    background-color: #85799E; 
+}
+
+#search-svg{
+    filter:  brightness(0) invert(1);
+}
+
+.container-list{
+    border: 3px solid #85799E; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h4{
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #85799E; 
+}
+
+hr{
+    background-color: #269BB7;
+    border: 1px solid #269BB7;
+}
+
+.container-data{
+    padding: 30px 0;
+    border: 3px solid #85799E; 
+    border-radius: 10px;
+    margin-top: 0px;
+    height: 100%;
+}
+
+.propiedad-usuario{
+    font-family: 'Montserrat';
+    color: #85799E; 
+    list-style-type: none;
+}
+
+.user-element{
+    font-family: 'Montserrat';
+    color: #85799E;
+    margin-bottom: 5px;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #269BB7;
+    font-family: 'Montserrat';
+  }
+
+  .my-pagination /deep/ .ngx-pagination {
+    align-items: center;
+    font-family: 'Montserrat';
+    color: #85799E;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .btn{
+      margin: 1px;
+  }
+
+  #email-svg{
+    height: 100%;
+    width: 100%;
+}
+
+#pass-svg{
+    height: 186%;
+    width: 186%;
+    margin-left: 1px;
+}
+
+
+
+
+
+
+
+
+
+
