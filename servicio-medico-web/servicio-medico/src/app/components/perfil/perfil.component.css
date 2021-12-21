@@ -1,0 +1,245 @@
+
+.title{
+    padding-top: 0px;
+    font-weight: bold;
+    background-image: linear-gradient(60deg, #5C87AA, #6DCFD8);
+    background-clip: text;
+    color:transparent;
+    font-size: 4vw;
+    margin: 0px;
+    font-family: 'Montserrat';
+   
+    text-align: left;
+}
+
+hr{
+    background-color: #5C87AA;
+    border-color:  #5C87AA;
+    width: 35vw;
+    margin-left: 0px;
+}
+
+.subtitle{
+    background-image: linear-gradient(#5C87AA,#6DCFD8);
+    background-clip: text;
+    color:transparent;
+    text-align: left;
+    font-size: 1.8vw;
+}
+
+.employee-photo-input{
+    position: absolute;
+	left: -1000px;
+    visibility: hidden;
+}
+
+.foto-container{
+    background-color: #5C87AA;
+    background-size: 11vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 11vw; /* temporal*/
+    width: 11vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+}
+
+.imagen-button{
+    border-color: rgba(255, 255, 255, 0.342);
+    background-image: linear-gradient(60deg, #5C87AA, #6DCFD8);
+    border-radius: 10px;
+    padding: 5%;
+    margin: 5%;
+    margin-bottom: -10%;
+    position: relative;
+    
+    font-size: 1vw;
+    color:white;
+    font-family: 'Montserrat';
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+    
+    
+}
+
+.header-columns{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-bottom: 3vh;
+}
+
+input{
+    font-family: 'Montserrat'; 
+    font-size: 0.8vw;
+}
+
+.columns{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+}
+
+.form-column{
+    background: rgba(255, 255, 255, 0.342) !important;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+}
+
+.form-par{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+.form-group{
+    font-style: 'Montserrat';
+    margin-right: 10px;
+    
+}
+
+.individual{
+    width: 20vw
+}
+
+
+
+
+
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label up*/
+    color: #5C87AA !important;
+    font-family: 'Montserrat';
+    font-size: 1vw;
+   }
+  
+   mat-label {
+    /*change color of static label*/
+    color: #5C87AA !important;
+    font-family: 'Montserrat';
+    font-size: 1vw;
+   }
+
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #5C87AA !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #5C87AA !important;;
+  }
+  
+  mat-select{
+      font-family: 'Montserrat';
+      font-size: 0.8vw;
+  }
+  
+  .actualizar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5vw;
+    margin: auto;
+    margin-top: 4vh;
+    
+    width: 50vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-image: linear-gradient(60deg, #5C87AA, #6DCFD8);
+    border-radius: 10vw;
+    border-color: transparent;
+    color: white;
+    transition: 1s linear;
+    -webkit-transition:all 0.3s ease;
+  }
+
+  .actualizar:hover {
+    transition: ease-out 1s;
+    transform: scale(1.05) perspective(1px); 
+}
+
+
+.pair-form-field{
+    width: 9vw;
+}
+
+mat-error{
+    font-family: 'Montserrat';
+    font-size: 0.6vw;
+}
+
+@media screen and (max-width: 1224px){
+    .columns{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .pair-form-field{
+        width:11vw;
+    }
+
+    mat-error{
+        font-size: 1vw;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    .columns{
+        display:grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .form-par{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pair-form-field{
+        width: 30vw;
+    }
+
+    input{
+        font-size: 2vw;
+    }
+
+    mat-select{
+        font-family: 'Montserrat';
+        font-size: 2vw;
+    }
+    
+    ::ng-deep .mat-focused .mat-form-field-label {
+        /*label up*/
+        font-size: 3vw;
+       }
+      
+       mat-label {
+        /*static label*/
+        font-size: 3vw;
+       }
+
+       mat-error{
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    
+    
+}
+

@@ -1,0 +1,164 @@
+.menu{
+    height: 100%;
+}
+
+.title{
+    padding-top: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(60deg, #6DCFD8, #B6CDC7);
+    background-clip: text;
+    color:transparent;
+    font-size: 5.3vw;
+    margin: 0px;
+    font-family: 'Montserrat';
+   
+    text-align: center;
+}
+
+hr{
+    background-color: #6DCFD8;
+    border-color:  #6DCFD8;
+    width: 50vw;
+}
+
+.subtitle{
+    background-image: linear-gradient(#42a6af,#6DCFD8);
+    background-clip: text;
+    color:transparent;
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+.information-container{
+    height: auto;
+    color: #42a6af;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    gap:10px;
+    font-size: 1.5vw;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+}
+
+.information-icon{
+    filter: invert(77%) sepia(53%) saturate(296%) hue-rotate(140deg) brightness(100%) contrast(94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; 
+    max-height: 100%; 
+    padding: 7px;
+}
+
+
+.information-text{
+    color: blue;
+    display: flex;
+    text-align: center;
+}
+
+.information-squares{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.square{
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+    height: 100%;
+}
+
+.i-square-encuesta{
+    background-image: url('../../../assets/images/encuesta-png.png');
+}
+
+.i-square-familia{  
+    background-image: url('../../../assets/images/familia-png.png');
+}
+
+.i-square-perfil{
+    background-image: url('../../../assets/images/perfil-png.png');
+}
+
+.inside-square{
+    height: 100%;
+    text-align: left;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position-x: 180%;
+    background-position-y: -20%;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+}
+
+.text-inside-square{
+    font-size: 1.2vw;
+    color: white;
+    margin-bottom: 0px;
+    padding:10px;
+
+}
+
+.number{
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    width: 4vw;
+    
+}
+
+.text-encuesta{
+    color: #84BFAF;
+}
+
+.text-familia{
+    color: #269BB7;
+}
+
+.text-perfil{
+    color: #6D71A2;
+}
+
+.i-square-encuesta{
+    background-color: #84BFAF;
+}
+
+.i-square-familia{
+    background-color: #269BB7;
+}
+
+.i-square-perfil{
+    background-color: #6D71A2;
+}
+
+@media screen and (max-width: 1024px){
+    .information-squares{
+        display: flex;
+    }
+
+    .inside-square{
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-size: 15vw;
+        background-position-x: 90%;
+    }
+
+    .number{
+        justify-content: center;
+        
+    }
+}
+
+

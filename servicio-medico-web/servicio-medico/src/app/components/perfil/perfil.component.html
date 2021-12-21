@@ -1,0 +1,321 @@
+<div class="perfil">
+    
+    
+
+    <div class="formulario">
+        <form [formGroup]="form" (ngSubmit)="saveForm($event)" action="">
+            <div class="header-columns"> 
+                <div class="title-subtitle">
+                    <p class="title">Perfil</p>
+                    <hr>
+                    <p class="subtitle">Verifique su información </p>
+                </div>
+                <div class="foto">
+                    <input
+                    (change)="capturarFile($event)"
+                    type="file" 
+                    class="employee-photo-input"
+                    name="employee_photo"
+                    id="employee_photo"
+                    
+                    placeholder="your image"
+                    #photoInput
+                    >
+                        <div class="foto-container" style="background-image: url({{url}});">
+                        <button class="imagen-button" type="button" (click)="photoInput.click()">Cambiar Foto</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="columns">
+                <div class="form-column">
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Primer Nombre 
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('first_name')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="first_name" id="first_name" placeholder="" formControlName="first_name" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Segundo Nombre</mat-label>
+                                <input matInput type="text" class="" name="middle_name" id="middle_name" placeholder="" formControlName="middle_name" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Apellido Paterno
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('paternal_surname')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="paternal_surname" id="paternal_surname" placeholder="" formControlName="paternal_surname" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Apellido Materno
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('maternal_surname')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="maternal_surname" id="maternal_surname" placeholder="" formControlName="maternal_surname" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Correo Electronico
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('email')"> 
+                                        Requerido 
+                                    </mat-error>
+                                    <mat-error *ngIf="emailValidatorIsInvalid('email')"> 
+                                        Invalido
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="email" class="" name="email" id="email" placeholder="" formControlName="email" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Domicilio
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('address')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="address" id="address" placeholder="" formControlName="address" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Sexo
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('gender')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                
+                                <mat-select class="" name="gender" id="gender" formControlName="gender">
+                                    <mat-option value="Femenino">Femenino</mat-option>
+                                    <mat-option value="Masculino">Masculino</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Edad
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('age')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="number" class="" name="age" id="age" placeholder="" formControlName="age" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Peso (kg)
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('weight')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="number" class="" name="weight" id="weight" placeholder="Kilos" formControlName="weight" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Estatura (cm)
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('height')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="number" class="" name="height" id="height" placeholder="Centimetros" formControlName="height" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Fecha de nacimiento
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('date_birth')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="date" class="" name="date_birth" id="date_birth" placeholder="" formControlName="date_birth" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Lugar de Nacimiento
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('place_birth')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="place_birth" id="place_birth" placeholder="" formControlName="place_birth" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Color de Ojos</mat-label>
+                                <input matInput type="text" class="" name="eye_color" id="eye_color" placeholder="" formControlName="eye_color" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Color de Cabello</mat-label>
+                                <input matInput type="text" class="" name="hair_color" id="hair_color" placeholder="" formControlName="hair_color" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Cel. Emergencia
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('cellphone_emergency')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="cellphone_emergency" id="cellphone_emergency" placeholder="" formControlName="cellphone_emergency" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Tel. Emergencia
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('telephone_emergency')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="telephone_emergency" id="telephone_emergency" placeholder="" formControlName="telephone_emergency" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Nombre Emergencia
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('name_emergency')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="name_emergency" id="name_emergency" placeholder="" formControlName="name_emergency" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Donador</mat-label>
+                                <input matInput type="text" class="" name="donor" id="donor" placeholder="" formControlName="donor" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Estado Civil
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('marital_status')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <mat-select class="" name="marital_status" id="marital_status" formControlName="marital_status">
+                                    <mat-option value="Soltero">Soltero(a)</mat-option>
+                                    <mat-option value="Casado(a)">Casado(a)</mat-option>
+                                    <mat-option value="Divorciado(a)">Divorciado(a)</mat-option>
+                                    <mat-option value="Viudo(a)">Viudo(a)</mat-option>
+                                    <mat-option value="Concubinato">Concubinato</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Nacionalidad
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('nationality')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="nationality" id="nationality" placeholder="" formControlName="nationality" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Nombre del Padre
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('name_father')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="name_father" id="name_father" placeholder="" formControlName="name_father" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Nombre de la Madre
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('name_mother')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="name_mother" id="name_mother" placeholder="" formControlName="name_mother" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>CURP
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('curp')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="text" class="" name="curp" id="curp" placeholder="" formControlName="curp" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>RFC</mat-label>
+                                <input matInput type="text" class="" name="rfc" id="rfc" placeholder="" formControlName="rfc" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Religion</mat-label>
+                                <input matInput type="text" class="" name="religion" id="religion" placeholder="" formControlName="religion" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="pair-form-field" floatLabel="always">
+                                <mat-label>Contraseña
+                                    <mat-error *ngIf="requiredValidatorIsInvalid('password')"> 
+                                        Requerido 
+                                    </mat-error>
+                                </mat-label>
+                                <input matInput type="password" class="" name="password" id="password" placeholder="" formControlName="password" autocomplete="off">
+                              </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="form-par">
+                        
+                    </div>  
+                </div>
+            </div>
+            
+            <button class="actualizar" type="submit">Actualizar</button>
+        </form> 
+    </div>
+</div>
+

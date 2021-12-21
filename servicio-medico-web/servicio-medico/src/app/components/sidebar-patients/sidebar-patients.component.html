@@ -1,0 +1,47 @@
+<mat-sidenav-container >
+    <mat-sidenav #sidenav="matSidenav" mode="side" opened="true">
+        <div class="logo">
+            <img class="logo-grupocots" src="../../../assets/images/Logo GrupoCots horizontal.png" alt="logo-GrupoCots">
+        </div>
+        <div class="options">
+            <div class="principal-options">
+                <div class="sidebar-option" (click)="closeSidenavIf()" routerLink="/menu">
+                    <img class="icon-option" src="../../../assets/images/menu-icon.svg" alt="">
+                    <p class="text-option">Menú</p>
+                </div>
+                <div class="sidebar-option" (click)="closeSidenavIf()" routerLink="/encuestas">
+                    <img class="icon-option" src="../../../assets/images/encuesta-icon.svg" alt="">
+                    <p class="text-option">Encuestas</p>
+                </div>
+                <div class="sidebar-option" (click)="closeSidenavIf()" routerLink="/perfil">
+                    <img class="icon-option" src="../../../assets/images/perfil-icon.svg" alt="">
+                    <p class="text-option">Perfil</p>
+                </div>
+                <div class="sidebar-option" (click)="closeSidenavIf()" routerLink="/familia">
+                    <img class="icon-option" src="../../../assets/images/familia-icon.svg" alt="">
+                    <p class="text-option">Registrar Familiar</p>
+                </div>
+            </div>
+            <div class="logout-option">
+                <div class="sidebar-option" (click)="authService.logOut()">
+                    <img class="icon-option" src="../../../assets/images/logout-icon.svg" alt="">
+                    <p class="text-option">Cerrar Sesión</p>
+                </div>
+            </div>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <button class="toggle-button" mat-icon-button *ngIf="sidenav.mode === 'over' || !sidenav.opened" (click)="sidenav.toggle()">
+          <mat-icon *ngIf="!sidenav.opened">
+              menu
+          </mat-icon>
+          <mat-icon *ngIf="sidenav.opened">
+              close
+          </mat-icon>
+      </button>  
+        <div class="content">
+          <router-outlet name='patients-content'></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

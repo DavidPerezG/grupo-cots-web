@@ -1,0 +1,118 @@
+.title{
+    padding-top: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(60deg, #6DCFD8, #B6CDC7);
+    background-clip: text;
+    color:transparent;
+    font-size: 5.3vw;
+    margin: 0px;
+    font-family: 'Montserrat';
+   
+    text-align: left;
+}
+
+hr{
+    background-color: #6DCFD8;
+    border-color:  #6DCFD8;
+    width: 27vw;
+    margin-left: 0px;
+}
+
+.subtitle{
+    background-image: linear-gradient(#42a6af,#6DCFD8);
+    background-clip: text;
+    color:transparent;
+    text-align: left;
+    font-size: 1.8vw;
+}
+
+.seleccion-encuesta{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.encuesta{
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 1s linear;
+    -webkit-transition:all 0.3s ease;
+}
+
+.encuesta:hover {
+    transition: ease-out 1s;
+    transform: scale(1.1) perspective(1px); 
+}
+
+.encuesta:hover .imagen-encuesta{
+    transition: ease-out 1s;
+    transform: rotateY(360deg);
+}
+
+.text-encuesta{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-encuesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%; 
+    max-height: 100%; 
+    margin-top:6px;
+    margin-bottom:6px;
+}
+
+.e-informacion-personal{
+    background-color: #6FBDC9;
+}
+
+.e-informacion-trabajo{
+    background-color: #84BFAF;
+}
+
+.e-historial-medico{
+    background-color: #46B6B8;
+}
+
+.e-condiciones-personales{
+    background-color: #83CFCF;
+}
+
+.e-datos-socioeconomicos{
+    background-color: #5C87AA;
+}
+
+.e-historial-familiar{
+    background-color: #6D71A2;
+}
+
+.e-costumbres{
+    background-color: #269BB7;
+}
+
+.e-habitos-alimenticios{
+    background-color: #6FCFD8
+}
+
+@media screen and (max-width: 1024px){
+    .seleccion-encuesta{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    .text-encuesta{
+        font-size: 2.5vw;
+        
+    }
+    
+}
+
+

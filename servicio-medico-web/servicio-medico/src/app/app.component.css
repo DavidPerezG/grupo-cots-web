@@ -1,0 +1,106 @@
+
+
+
+
+
+mat-sidenav{
+    margin: 16px;
+    
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 230px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 3px 5px 2px rgb(170, 196, 207);
+}
+
+mat-sidenav-container {
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 30px;
+    width: 90vw;
+    font-family: 'Montserrat';
+    
+}
+
+
+.content {
+    margin: 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    
+}
+
+img{
+    width: 100%;
+}
+
+.logo-grupocots{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    
+}
+
+.toggle-button{
+    margin:10px;
+}
+
+.sidebar-option{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sidebar-option:hover {
+    filter: invert(77%) sepia(53%) saturate(296%) hue-rotate(140deg) brightness(130%) contrast(94%);
+}
+
+.sidebar-option:active {
+    filter: invert(77%) sepia(53%) saturate(296%) hue-rotate(140deg) brightness(130%) contrast(94%);
+    
+}
+
+.icon-option{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: invert(83%) sepia(12%) saturate(42%) hue-rotate(169deg) brightness(91%) contrast(88%);
+}
+
+
+
+.text-option{
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-size: 15px;
+}
+
+
+
+@media screen and (min-height: 600px){
+    .logout-option{
+        position:absolute;
+        bottom: 0;
+
+    }
+    
+}
+
+@media screen and (max-width: 600px){
+    .content {
+        margin: 16px;
+        margin-left: 18px;
+        margin-right: 18px;
+        
+    }
+}
+
+
